@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% Content adapted from main.tex while retaining the cv_4.tex layout.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{TitleColor}{HTML}{17324D}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{mathpazo}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{needspace}
+\usepackage[
+  colorlinks=true,
+  urlcolor=TitleColor,
+  linkcolor=TitleColor,
+  pdfauthor={Shufan Shahi},
+  pdftitle={Shufan Shahi - Curriculum Vitae}
+]{hyperref}
+
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.5in]{geometry}
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  itemsep=1pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\projectheading}[4]{%
+  \Needspace{3\baselineskip}% Keep the heading with at least the first detail line.
+  \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+    \textbf{#1 - #2} $|$ \emph{#3} & {\small #4}
+  \end{tabularx}\vspace{-4pt}
+}
+
+\name{Shufan Shahi}
+
+% resume.cls prints the third \address first, followed by the first and second.
+\address{
+  \faPhone\ \href{tel:+8801990935044}{+880 1990-935044} \quad
+  \faEnvelope\ \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com}
+}
+\address{
+  \faGithub\ \href{https://github.com/shufanshahi}{github.com/shufanshahi} \quad
+  \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan}
+}
+\address{\faMapMarker*\ Dhaka, Bangladesh}
+
+% Keep the template's centered header while containing its harmless \centerline warning.
+\renewcommand{\printaddress}[1]{%
+  \begingroup
+    \hfuzz=31pt
+    \def\\{\addressSep\ }%
+    \centerline{#1}\par
+  \endgroup
+  \addressskip
+}
+
+\makeatletter
+\renewcommand{\printname}{%
+  \begingroup
+    \hfuzz=31pt
+    \hfil{\color{TitleColor}\MakeUppercase{\namesize\bfseries\@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
+\titleformat{\section}
+  {\Large\bfseries\scshape}{}{0em}{\color{TitleColor}}
+  [\color{TitleColor}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.65em}
+
+\renewenvironment{rSection}[1]{
+  \Needspace{3\baselineskip}% Avoid an orphaned section title without reserving a large block.
+  \section{#1}
+  \begin{list}{}{
+      \setlength{\leftmargin}{0.2em}
+  }
+  \item[]
+}{
+  \end{list}
+  \vspace{0pt}
+}
+
+\begin{document}
+\fontsize{11.5pt}{14pt}\selectfont
+
+% \begin{rSection}{Professional Profile}
+% Computer Science undergraduate with hands-on experience in data analysis, machine learning, and full-stack development. Built web and mobile applications using React, Node.js, and Firebase. Skilled in relational databases, API integration, and delivering real-world solutions through hackathons and academic projects.
+% \end{rSection}
+
+\begin{rSection}{Education}
+\textbf{Islamic University of Technology} \hfill \textbf{2022--Present} \\
+B.Sc. in Computer Science and Engineering
+\begin{itemize}
+  \item Current CGPA: 3.55
+  \item Relevant coursework: Data Structures and Algorithms, Machine Learning, Deep Learning with CV, Database Systems, and Computer Networks
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Experience}
+\textbf{Student Researcher} \hfill \textbf{2026--Present} \\
+\emph{Elite Research Lab}
+\begin{itemize}
+  \item Support research projects through literature reviews, experiments, and analysis.
+\end{itemize}
+
+\textbf{Researcher} \hfill \textbf{2025--2026} \\
+\emph{IUT Computer Vision Lab}
+\begin{itemize}
+  \item Researched multimodal AI methods to improve integration and mitigate modality imbalance.
+\end{itemize}
+
+
+\textbf{Senior Executive} \hfill \textbf{2025--2026} \\
+\emph{Project Aero}
+\begin{itemize}
+  \item Contributed to drone R\&D by applying AI-based object tracking for international UAV competitions.
+\end{itemize}
+
+
+
+\end{rSection}
+
+
+
+\begin{rSection}{Publications and Conferences}
+\Needspace{3\baselineskip}
+\textbf{EthMuSAM : Mutual Scoring With SAM For Zero Shot Anomaly Segmentation[Preprint]} \hfill \textbf{2026}
+\begin{itemize}
+  \item Extracted patch-level representations from images using pretrained DINOv2 encoders.
+  \item Localized anomalous regions by comparing test-image embeddings with representations from normal reference images.
+\end{itemize}
+\Needspace{3\baselineskip}
+\textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation (MERC)[Preprint]} \hfill \textbf{2026}
+\begin{itemize}
+  \item Developed graph-compatible adaptive feature weighting and modality-specific prototype supervision to learn class-discriminative representations before cross-modal reasoning.
+  \item Improved multimodal emotion-recognition performance across multiple benchmark datasets through adaptive feature processing and prototype-guided learning.
+\end{itemize}
+\Needspace{3\baselineskip}
+\textbf{Rethinking Visual Features in Graph Based Multimodal Emotion Recognition in Conversations (MERC): From Low Level Pixels to Semantic Representations[Preprint]} \hfill \textbf{2026}
+\begin{itemize}
+  \item Developed a semantic visual-feature pipeline that converts utterance-level videos into temporally structured descriptions of facial expressions, gaze, body language, and emotional transitions.
+  \item Encoded the descriptions into dense representations for graph-based multimodal reasoning, improving cross-modal alignment while providing a viable alternative to noisy handcrafted visual features.
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\textbf{Programming Languages:} Python, C++, Java \\
+\textbf{Data and Machine Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
+\textbf{Databases:} MySQL, Firebase, PostgreSQL \\
+\textbf{Web Development:} React, Tailwind CSS, Next.js, Spring Boot \\
+\textbf{Mobile Development:} React Native, Flutter \\
+\textbf{Visualization:} Matplotlib, Seaborn \\
+\textbf{Development Tools:} Git, Linux \\
+\end{rSection}
+
+
+\begin{rSection}{Achievements, Awards and Scholarships}
+\begin{itemize}[leftmargin=*,label=$\bullet$]
+    \item \textbf{5th Place, VAND4 International Competition} \hfill \textbf{2026} \\
+  Zero-Shot Industrial Track; built a zero-shot computer vision pipeline for detecting anomalies in industrial images using foundation models.
+  
+  \item \textbf{First Runner-up, IUT Coderush Hackathon} \hfill \textbf{2025} \\
+  Built an application under tight deadlines in a fast-paced team.
+\item \textbf{7th Place, BAIC Datathon} \hfill \textbf{2025} \\
+  Analyzed datasets using preprocessing, visualization, and modeling.
+\item \textbf{IUT Partial Scholarship} \hfill \textbf{2022} \\
+  Secured a partial scholarship covering all four years of B.Sc. studies.
+\item \textbf{Runner-up, State-Level Physics Olympiad} \hfill \textbf{2018}
+\end{itemize}
+\end{rSection}
+
+
+
+\begin{rSection}{Reference}
+\textbf{Shahriar Ivan} \\
+Assistant Professor, Department of CSE, IUT \\
+\textbf{Specialization:} Machine Learning, Deep Learning, Computer Vision \\
+\faEnvelope\ \href{mailto:shahriarivan@iut-dhaka.edu}{shahriarivan@iut-dhaka.edu}
+\end{rSection}
+
+\end{document}

@@ -1,0 +1,223 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Design tokens — a modern academic blue palette.
+
+   Every colour used by the site is declared here, so the whole visual identity
+   can be retuned from one block. Tailwind v4 turns each token into a utility
+   automatically (e.g. --color-accent -> text-accent, bg-accent, border-accent).
+--------------------------------------------------------------------------- */
+@theme {
+  /* Surfaces */
+  --color-paper: #fdfdfc; /* page background, a warm off-white */
+  --color-surface: #f6f8fa; /* cards, callouts, subtle panels */
+  --color-surface-blue: #eef3f8; /* light blue accent panels */
+  --color-line: #e0e4e9; /* soft cool grey borders */
+  --color-line-strong: #cbd2da;
+
+  /* Dark academic reading palette */
+  --color-ink: #16202c; /* primary body + headings, near-black navy */
+  --color-ink-secondary: #3d4854; /* supporting prose */
+  --color-muted: #67717e; /* metadata, dates, captions */
+
+  /* Blues */
+  --color-navy: #17324d; /* deep academic navy — headings, nav */
+  --color-accent: #2b5d8b; /* links, buttons, active states */
+  --color-accent-strong: #1e4468; /* hover / pressed state for accent */
+  --color-accent-soft: #7fa6c6; /* rules, subtle marks */
+
+  /* Typography */
+  --font-serif: 'Source Serif 4', 'Iowan Old Style', 'Palatino Linotype',
+    'Times New Roman', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Reading measure */
+  --container-reading: 44rem;
+  --container-page: 62rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    /* Sticky header height, so #anchor targets are not hidden behind the nav. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-navy);
+    font-weight: 600;
+    letter-spacing: -0.011em;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+
+  a {
+    color: var(--color-accent);
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    color: var(--color-accent-strong);
+  }
+
+  /* A single, consistent focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-surface-blue);
+    color: var(--color-navy);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Long-form reading style, used by blog posts.
+--------------------------------------------------------------------------- */
+@layer components {
+  .prose-academic {
+    color: var(--color-ink-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .prose-academic > * + * {
+    margin-top: 1.35em;
+  }
+
+  .prose-academic h2 {
+    font-size: 1.5rem;
+    margin-top: 2.4em;
+    margin-bottom: -0.4em;
+  }
+
+  .prose-academic h3 {
+    font-size: 1.2rem;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+  }
+
+  .prose-academic strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+
+  .prose-academic em {
+    color: var(--color-ink-secondary);
+  }
+
+  .prose-academic a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-soft);
+  }
+
+  .prose-academic ul,
+  .prose-academic ol {
+    padding-left: 1.35em;
+  }
+
+  .prose-academic ul {
+    list-style: disc;
+  }
+
+  .prose-academic ol {
+    list-style: decimal;
+  }
+
+  .prose-academic li + li {
+    margin-top: 0.5em;
+  }
+
+  .prose-academic li::marker {
+    color: var(--color-accent-soft);
+  }
+
+  .prose-academic blockquote {
+    border-left: 2px solid var(--color-accent-soft);
+    padding-left: 1.1em;
+    color: var(--color-muted);
+    font-style: italic;
+  }
+
+  .prose-academic code {
+    font-size: 0.9em;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+  }
+
+  .prose-academic pre {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .prose-academic pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .prose-academic hr {
+    border-color: var(--color-line);
+    margin-block: 2.5em;
+  }
+
+  .prose-academic table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+  }
+
+  .prose-academic th,
+  .prose-academic td {
+    border: 1px solid var(--color-line);
+    padding: 0.5em 0.7em;
+    text-align: left;
+  }
+
+  .prose-academic th {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+}
