@@ -22,7 +22,7 @@ export default function Hero() {
               alt={siteConfig.profileImageAlt}
               width={176}
               height={176}
-              className="h-32 w-32 rounded-sm border border-line object-cover shadow-[0_1px_2px_rgba(22,32,44,0.06)] sm:h-44 sm:w-44"
+              className="h-32 w-32 rounded-sm border border-line object-cover object-top shadow-[0_1px_2px_rgba(22,32,44,0.06)] sm:h-44 sm:w-44"
             />
           </div>
         ) : null}
