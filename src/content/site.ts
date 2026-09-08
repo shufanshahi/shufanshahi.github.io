@@ -44,7 +44,7 @@ export const siteConfig = {
   url: 'https://shufanshahi.github.io',
 
   /** Footer line. */
-  footerNote: 'Built with Next.js and Tailwind CSS. Hosted on GitHub Pages.',
+  footerNote: '',
 } as const;
 
 /**
