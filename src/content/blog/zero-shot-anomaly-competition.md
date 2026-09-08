@@ -1,6 +1,6 @@
 ---
 title: "Notes from a zero-shot anomaly detection competition"
-date: "2026-01-24"
+date: "2026-04-24"
 description: "What actually moved the needle in the VAND4 zero-shot industrial track, and the things we tried that did not."
 tags: ["competition", "anomaly detection", "foundation models"]
 draft: false

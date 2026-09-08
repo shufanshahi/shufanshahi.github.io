@@ -1,6 +1,6 @@
 ---
 title: "Reading notes: why multimodal models quietly become unimodal"
-date: "2026-02-18"
+date: "2026-06-18"
 description: "Modality imbalance is usually framed as an optimisation problem. I think it is at least partly a features problem, and the distinction changes what you should do about it."
 tags: ["multimodal", "reading notes", "representation learning"]
 draft: false
