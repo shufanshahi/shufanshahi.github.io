@@ -60,14 +60,20 @@ export const publicationCategories: {
 export const publications: Publication[] = [
   {
     title:
-      'EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation',
-    authors: ['Shufan Shahi', 'Co-author Name', 'Co-author Name'],
+      'Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation',
+    authors: [
+      'Shufan Shahi',
+      'Asif Or Rashid Alif',
+      'Abdullah Al Jubaer Gem',
+      'Shahriar Ivan',
+      'Asaduzzaman Herok',
+    ],
     venue: 'Preprint',
     year: 2026,
     category: 'preprint',
     status: 'Preprint',
     abstract:
-      'We extract patch-level representations from images using pretrained DINOv2 encoders and localise anomalous regions by mutually scoring test-image embeddings against representations drawn from normal reference images, requiring no anomalous supervision at any stage.',
+      "Graph neural networks have advanced multimodal emotion recognition in conversation (MERC) by modeling contextual and cross-modal dependencies. M³Net further captures higher-order relations and complementary graph frequencies, but its prediction pipeline relies primarily on a shared fused objective and does not adapt modality features or impose class structure before graph propagation. We introduce Prototype-Guided Adaptive Feature Learning, an extension of M³Net that combines Adaptive Feature Weighting (AFW) with modality-specific prototype supervision. To make AFW compatible with flat graph batches, we replace padded temporal pooling with a per-dialogue segment mean that is broadcast to the corresponding utterance nodes. We then construct class prototypes from pre-graph representations and optimize prototypical cross-entropy together with early entropy regularization, providing direct class-discriminative guidance to each encoder. The resulting model preserves M³Net's multivariate and multi-frequency reasoning while improving its learned representations at both feature and class levels. On IEMOCAP and MELD, our method improves accuracy and weighted F1 over the reproduced backbone, demonstrating the effectiveness of adaptive feature processing and prototype-guided supervision for graph-based MERC.",
     links: {
       pdf: '#',
       code: '#',
@@ -75,14 +81,20 @@ export const publications: Publication[] = [
   },
   {
     title:
-      'Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation',
-    authors: ['Shufan Shahi', 'Co-author Name'],
+      'EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation',
+    authors: [
+      'Md Abdullah Al Jubaer Gem',
+      'Tanjil Hasan Khan',
+      'Ibrahima Mamoudou',
+      'Shufan Shahi',
+      'Afra Anika',
+    ],
     venue: 'Preprint',
     year: 2026,
     category: 'preprint',
     status: 'Preprint',
     abstract:
-      'We introduce graph-compatible adaptive feature weighting together with modality-specific prototype supervision, learning class-discriminative representations before cross-modal reasoning begins. The combination improves emotion-recognition performance across several benchmark conversation datasets.',
+      'In this paper, we present an enhanced hybrid framework for zero-shot visual anomaly detection, focusing on robust defect segmentation in complex real-world industrial environments. To significantly improve pixel-level anomaly localization, we integrate a cascaded prompt refinement strategy leveraging the Segment Anything Model (SAM) with the MuSc-DINOv3 architecture. Specifically, we extract initial anomaly heatmaps and employ a 3-pass prompting mechanism. By dynamically sampling positive and negative point prompts through adaptive Otsu thresholding and structural dilation, and generating refined bounding box prompts from connected components, our method effectively isolates defective regions. This integration seamlessly converts coarse anomaly heatmaps into precise binary segmentation masks using a parameter-free SAM refinement module. Experimental results on MVTec AD 2 demonstrate strong localization behavior, achieving a mean SegF1 of 27.78% and several strong category-level results, including 55.55% SegF1 on fabric, 80.94% pixel-level AUROC on walnuts, 94.67% image-level AUROC on vial, and 73.45% mean image-level AP across categories.',
     links: {
       pdf: '#',
       code: '#',
@@ -91,13 +103,19 @@ export const publications: Publication[] = [
   {
     title:
       'Rethinking Visual Features in Graph-Based Multimodal Emotion Recognition in Conversations: From Low-Level Pixels to Semantic Representations',
-    authors: ['Shufan Shahi', 'Co-author Name'],
+    authors: [
+      'Abdullah Al Jubaer Gem',
+      'Shufan Shahi',
+      'Asif Or Rashid Alif',
+      'Shahriar Ivan',
+      'Asaduzzaman Herok',
+    ],
     venue: 'Preprint',
     year: 2026,
     category: 'preprint',
     status: 'Preprint',
     abstract:
-      'We build a semantic visual-feature pipeline that converts utterance-level video into temporally structured descriptions of facial expression, gaze, body language and emotional transition, then encode those descriptions for graph-based multimodal reasoning. The result improves cross-modal alignment and offers a viable alternative to noisy handcrafted visual features.',
+      "Multimodal Emotion Recognition in Conversations (MERC) aims to identify emotions in each utterance using visual, audio, and linguistic cues, with applications in affective computing and human-computer interaction. Among the various approaches proposed to solve this problem, graph based approaches have emerged as some of the most promising ones but they often underutilize the visual modality due to noisy pixel level features. Traditional visual encoders focus on geometric and texture patterns, which often fail to capture facial expressions and behavioral cues, resulting in weak cross-modal alignment. To address this issue, we propose a Vision Language Model (VLM) based approach that encodes facial expressions and behavioral cues from the visual modality into semantically meaningful representations. Each utterance's video is translated into a descriptive textual representation using structured VLM prompts capturing expressions, gestures, body language and scenario understanding. These semantic visual features replace traditional low level visual inputs in graph based MERC frameworks, reducing noise and allowing the model to focus on meaningful visual information. This work presents VLM based semantic visual feature extraction as a viable replacement for conventional visual feature extraction pipelines in graph based MERC frameworks.",
     links: {
       pdf: '#',
       code: '#',
