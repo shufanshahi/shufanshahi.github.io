@@ -27,7 +27,7 @@ export const education: EducationEntry[] = [
     thesisDescription:
       'Work on multimodal emotion recognition in conversation, focusing on how graph-based models consume visual features and on reducing modality imbalance during fusion.',
     details: [
-      'Current CGPA: 3.55 / 4.00',
+      'Current CGPA: 3.58 / 4.00',
       'Partial scholarship covering all four years of study',
       'Relevant coursework: Data Structures and Algorithms, Machine Learning, Deep Learning with Computer Vision, Database Systems, Computer Networks',
     ],

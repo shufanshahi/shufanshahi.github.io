@@ -47,10 +47,14 @@ function PublicationEntry({ publication }: { publication: Publication }) {
         <Authors authors={publication.authors} />
 
         <p className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.8125rem] text-muted">
-          {publication.venue ? <span>{publication.venue}</span> : null}
-          <span aria-hidden="true" className="text-line-strong">
-            ·
-          </span>
+          {publication.venue ? (
+            <>
+              <span>{publication.venue}</span>
+              <span aria-hidden="true" className="text-line-strong">
+                ·
+              </span>
+            </>
+          ) : null}
           <span>{publication.year}</span>
           {publication.status ? (
             <span className="rounded-sm border border-line bg-surface px-1.5 py-0.5 text-[0.6875rem] font-medium uppercase tracking-wider">

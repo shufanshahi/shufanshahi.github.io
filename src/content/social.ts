@@ -49,20 +49,6 @@ export const socialLinks: SocialLink[] = [
     inHero: true,
   },
   {
-    label: 'Google Scholar',
-    href: 'https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID',
-    display: 'Google Scholar profile',
-    icon: 'scholar',
-    inHero: true,
-  },
-  {
-    label: 'ResearchGate',
-    href: 'https://www.researchgate.net/profile/YOUR-PROFILE',
-    display: 'ResearchGate profile',
-    icon: 'researchgate',
-    inHero: true,
-  },
-  {
     label: 'CV',
     href: '/cv.pdf',
     display: 'Curriculum vitae (PDF)',

@@ -55,7 +55,8 @@
 }
 \address{
   \faGithub\ \href{https://github.com/shufanshahi}{github.com/shufanshahi} \quad
-  \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan}
+  \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan} \quad
+  \faGlobe\ \href{https://shufanshahi.github.io/}{shufanshahi.github.io}
 }
 \address{\faMapMarker*\ Dhaka, Bangladesh}
 
@@ -104,12 +105,12 @@
 % \end{rSection}
 
 \begin{rSection}{Education}
-\textbf{Islamic University of Technology} \hfill \textbf{2022--Present} \\
-B.Sc. in Computer Science and Engineering
-\begin{itemize}
-  \item Current CGPA: 3.55
-  \item Relevant coursework: Data Structures and Algorithms, Machine Learning, Deep Learning with CV, Database Systems, and Computer Networks
-\end{itemize}
+\textbf{Islamic University of Technology} \hfill \textbf{2022--2026} \\
+B.Sc. in Computer Science and Engineering \hfill \textbf{CGPA: 3.58} \\
+Coursework: Algorithms, Machine Learning, Deep Learning, Databases, and Networks.
+
+\textbf{Chuadanga Govt. College} \hfill \textbf{2021} \\
+Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
 \end{rSection}
 
 \begin{rSection}{Experience}
@@ -117,6 +118,12 @@ B.Sc. in Computer Science and Engineering
 \emph{Elite Research Lab}
 \begin{itemize}
   \item Support research projects through literature reviews, experiments, and analysis.
+\end{itemize}
+
+\textbf{Intern} \hfill \textbf{2025} \\
+\emph{Battery Low Interactive Ltd.}
+\begin{itemize}
+  \item Learned Flutter development, REST API integration, and applications of fine-tuned ML models.
 \end{itemize}
 
 \textbf{Researcher} \hfill \textbf{2025--2026} \\
@@ -138,24 +145,92 @@ B.Sc. in Computer Science and Engineering
 
 
 
-\begin{rSection}{Publications and Conferences}
-\Needspace{3\baselineskip}
-\textbf{EthMuSAM : Mutual Scoring With SAM For Zero Shot Anomaly Segmentation[Preprint]} \hfill \textbf{2026}
+\Needspace{6\baselineskip}
+\begin{rSection}{Projects}
+
+\projectheading{DocuMind}{Document Q\&A}{Python, LangChain, LlamaIndex, ChromaDB, Ollama}{%
+  \href{https://github.com/shufanshahi/DocuMind}{\faGithub\ GitHub}%
+}
 \begin{itemize}
-  \item Extracted patch-level representations from images using pretrained DINOv2 encoders.
-  \item Localized anomalous regions by comparing test-image embeddings with representations from normal reference images.
+  \item Built a local RAG system for documents with cited answers and hallucination guardrails.
+  \item Compared 4 chunking methods and 2 embedding models; added hybrid BM25 and reranking.
+\end{itemize}
+
+\projectheading{Benhallu}{Bengali Hallucination Detection}{Python, RAG, BanglaBERT, scikit-learn}{%
+  \href{https://github.com/shufanshahi/Benhallu}{\faGithub\ GitHub}%
+}
+\begin{itemize}
+  \item Built a retrieval-augmented pipeline to verify Bengali answers against supplied context or a Bengali QA knowledge base.
+  \item Created a hallucination dataset and used fine-tuned BanglaBERT with answer-comparison features to classify responses.
+\end{itemize}
+
+\projectheading{Bengali Speaker Diarization}{Speaker Turn Detection}{PyTorch, Silero VAD, ECAPA-TDNN}{%
+  \href{https://github.com/shufanshahi/Bengali-Speaker-Diarization}{\faGithub\ GitHub}%
+}
+\begin{itemize}
+  \item Built a pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns.
+  \item Estimated speaker counts with silhouette scores and exported diarization results to CSV.
+\end{itemize}
+
+\projectheading{Drone Vision}{Aerial Tracking}{PyTorch, YOLOv11X, ByteTrack}{%
+  \href{https://github.com/shufanshahi/droneVision}{\faGithub\ GitHub}%
+}
+\begin{itemize}
+  \item Fine-tuned YOLOv11X on VisDrone and used ByteTrack for human counting and multi-object tracking.
+\end{itemize}
+
+\projectheading{BD Traffic Monitoring System}{Traffic Analytics}{PyTorch, YOLO11L, Flask, Docker}{%
+  \href{https://github.com/shufanshahi/bd-traffic-monitoring-system}{\faGithub\ GitHub}
+  \quad
+  \href{https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system}{\faRocket\ Live}%
+}
+\begin{itemize}
+  \item Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.
+\end{itemize}
+
+\projectheading{Biztrack}{Business Analytics}{Next.js, Node.js, PostgreSQL}{%
+  \href{https://github.com/shufanshahi/biztrack}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=STNoXqq8kQM}{\faYoutube\ Demo}%
+}
+\begin{itemize}
+  \item Built AI modules for real-time finance tracking, risk alerts, customer segmentation, and forecasting.
+\end{itemize}
+
+\projectheading{Postfolio}{Professional Networking}{Spring Boot, Next.js, Docker, RabbitMQ, Stripe}{%
+  \href{https://github.com/shufanshahi/Postfolio}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=U6N-ioqvg9c}{\faYoutube\ Demo}%
+}
+\begin{itemize}
+  \item Integrates social networking, portfolio and CV creation, job search, and AI interview preparation.
+\end{itemize}
+
+\projectheading{Redrick Routinson}{Campus Automation}{Python, React, Flask, Firebase}{%
+  \href{https://github.com/shufanshahi/RedrickRoutinson}{\faGithub\ GitHub}
+  \quad
+  \href{https://www.youtube.com/watch?v=Fg-GkZrsIzw}{\faYoutube\ Demo}%
+}
+\begin{itemize}
+  \item Built GA scheduling, QR exam attendance, class swapping, events, forums, and lost-and-found.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Research Experiences}
+\Needspace{3\baselineskip}
+\textbf{EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation} \hfill \textbf{2026}
+\begin{itemize}
+  \item Combined DINOv2 patch embeddings with SAM-based mutual scoring to localize zero-shot anomalies.
 \end{itemize}
 \Needspace{3\baselineskip}
-\textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation (MERC)[Preprint]} \hfill \textbf{2026}
+\textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation (MERC)} \hfill \textbf{2026}
 \begin{itemize}
-  \item Developed graph-compatible adaptive feature weighting and modality-specific prototype supervision to learn class-discriminative representations before cross-modal reasoning.
-  \item Improved multimodal emotion-recognition performance across multiple benchmark datasets through adaptive feature processing and prototype-guided learning.
+  \item Used adaptive weighting and modality prototypes to improve multimodal emotion recognition.
 \end{itemize}
 \Needspace{3\baselineskip}
-\textbf{Rethinking Visual Features in Graph Based Multimodal Emotion Recognition in Conversations (MERC): From Low Level Pixels to Semantic Representations[Preprint]} \hfill \textbf{2026}
+\textbf{Rethinking Visual Features in Graph-Based Multimodal Emotion Recognition in Conversations (MERC): From Low-Level Pixels to Semantic Representations} \hfill \textbf{2026}
 \begin{itemize}
-  \item Developed a semantic visual-feature pipeline that converts utterance-level videos into temporally structured descriptions of facial expressions, gaze, body language, and emotional transitions.
-  \item Encoded the descriptions into dense representations for graph-based multimodal reasoning, improving cross-modal alignment while providing a viable alternative to noisy handcrafted visual features.
+  \item Used semantic visual representations to improve graph-based multimodal emotion recognition.
 \end{itemize}
 
 \end{rSection}
@@ -173,16 +248,9 @@ B.Sc. in Computer Science and Engineering
 
 \begin{rSection}{Achievements, Awards and Scholarships}
 \begin{itemize}[leftmargin=*,label=$\bullet$]
-    \item \textbf{5th Place, VAND4 International Competition} \hfill \textbf{2026} \\
-  Zero-Shot Industrial Track; built a zero-shot computer vision pipeline for detecting anomalies in industrial images using foundation models.
-  
-  \item \textbf{First Runner-up, IUT Coderush Hackathon} \hfill \textbf{2025} \\
-  Built an application under tight deadlines in a fast-paced team.
-\item \textbf{7th Place, BAIC Datathon} \hfill \textbf{2025} \\
-  Analyzed datasets using preprocessing, visualization, and modeling.
-\item \textbf{IUT Partial Scholarship} \hfill \textbf{2022} \\
-  Secured a partial scholarship covering all four years of B.Sc. studies.
-\item \textbf{Runner-up, State-Level Physics Olympiad} \hfill \textbf{2018}
+  \item \textbf{5th Place, VAND4 International Competition} --- Zero-Shot Industrial Track \hfill \textbf{2026}
+  \item \textbf{First Runner-up, IUT Coderush Hackathon} --- Rapid team application development \hfill \textbf{2025}
+  \item \textbf{7th Place, BAIC Datathon} --- Data preprocessing, visualization, and modeling \hfill \textbf{2025}
 \end{itemize}
 \end{rSection}
 

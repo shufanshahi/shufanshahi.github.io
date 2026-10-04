@@ -73,11 +73,11 @@ export const sections: Record<SectionKey, boolean> = {
  */
 export const navigation: { key: SectionKey; label: string; href: string }[] = [
   { key: 'about', label: 'About', href: '#about' },
+  { key: 'projects', label: 'Projects', href: '#projects' },
   { key: 'research', label: 'Research', href: '#research' },
   { key: 'publications', label: 'Publications', href: '#publications' },
   { key: 'education', label: 'Education', href: '#education' },
   { key: 'news', label: 'News', href: '#news' },
-  { key: 'projects', label: 'Projects', href: '#projects' },
   { key: 'teaching', label: 'Teaching', href: '#teaching' },
   { key: 'blog', label: 'Blog', href: '/blog' },
   { key: 'cv', label: 'CV', href: '#cv' },

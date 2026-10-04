@@ -21,6 +21,53 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'DocuMind',
+    description:
+      'Built a local RAG system for documents with cited answers and hallucination guardrails. Compared 4 chunking methods and 2 embedding models, and added hybrid BM25 retrieval with reranking.',
+    tags: ['Python', 'LangChain', 'LlamaIndex', 'ChromaDB', 'Ollama'],
+    links: { repo: 'https://github.com/shufanshahi/DocuMind' },
+  },
+  {
+    title: 'Benhallu',
+    description:
+      'Built a retrieval-augmented pipeline to verify Bengali answers against supplied context or a Bengali QA knowledge base. Created a hallucination dataset and used fine-tuned BanglaBERT with answer-comparison features to classify responses.',
+    tags: ['Python', 'RAG', 'BanglaBERT', 'scikit-learn'],
+    links: { repo: 'https://github.com/shufanshahi/Benhallu' },
+  },
+  {
+    title: 'Bengali Speaker Diarization',
+    description:
+      'Built a pipeline using neural voice activity detection, speaker embeddings, and agglomerative clustering to label timestamped speaker turns. Estimated speaker counts with silhouette scores and exported results to CSV.',
+    tags: ['PyTorch', 'Silero VAD', 'ECAPA-TDNN'],
+    links: { repo: 'https://github.com/shufanshahi/Bengali-Speaker-Diarization' },
+  },
+  {
+    title: 'Drone Vision',
+    description:
+      'Fine-tuned YOLOv11X on VisDrone with class-balanced training and tiled inference for small aerial objects. Implemented human counting and multi-object tracking using ByteTrack.',
+    tags: ['PyTorch', 'YOLOv11X', 'ByteTrack'],
+    links: { repo: 'https://github.com/shufanshahi/droneVision' },
+  },
+  {
+    title: 'BD Traffic Monitoring System',
+    description: 'Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.',
+    tags: ['PyTorch', 'YOLO11L', 'Flask', 'Docker'],
+    links: {
+      repo: 'https://github.com/shufanshahi/bd-traffic-monitoring-system',
+      project: 'https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system',
+    },
+  },
+  {
+    title: 'Biztrack',
+    description:
+      'Implemented AI modules for real-time finance tracking, risk alerts, segmentation, and forecasting for intelligent business insights.',
+    tags: ['Next.js', 'Node.js', 'PostgreSQL'],
+    links: {
+      repo: 'https://github.com/shufanshahi/biztrack',
+      demo: 'https://www.youtube.com/watch?v=STNoXqq8kQM',
+    },
+  },
+  {
     title: 'Postfolio',
     description:
       'Combines social sharing, portfolio and CV generation, job searching, and AI-powered interview preparation.',
@@ -38,32 +85,6 @@ export const projects: Project[] = [
     links: {
       repo: 'https://github.com/shufanshahi/RedrickRoutinson',
       demo: 'https://www.youtube.com/watch?v=Fg-GkZrsIzw',
-    },
-  },
-  {
-    title: 'Biztrack',
-    description:
-      'Implemented AI modules for real-time finance tracking, risk alerts, segmentation, and forecasting for intelligent business insights.',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL'],
-    links: {
-      repo: 'https://github.com/shufanshahi/biztrack',
-      demo: 'https://www.youtube.com/watch?v=STNoXqq8kQM',
-    },
-  },
-  {
-    title: 'Drone Vision',
-    description:
-      'Fine-tuned YOLOv11X on VisDrone with class-balanced training and tiled inference for small aerial objects. Implemented human counting and multi-object tracking using ByteTrack.',
-    tags: ['PyTorch', 'YOLOv11X', 'ByteTrack'],
-    links: { repo: 'https://github.com/shufanshahi/droneVision' },
-  },
-  {
-    title: 'BD Traffic Monitoring System',
-    description: 'Fine-tuned YOLO on Bangladesh traffic data to detect local vehicle types.',
-    tags: ['PyTorch', 'YOLO11L', 'Flask', 'Docker'],
-    links: {
-      repo: 'https://github.com/shufanshahi/bd-traffic-monitoring-system',
-      project: 'https://huggingface.co/spaces/shufanshahi/bd-traffic-monitoring-system',
     },
   },
   {

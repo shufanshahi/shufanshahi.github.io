@@ -54,7 +54,7 @@ export const publicationCategories: {
   { key: 'journal', label: 'Journal Articles' },
   { key: 'conference', label: 'Conference Papers' },
   { key: 'workshop', label: 'Workshop Papers' },
-  { key: 'preprint', label: 'Preprints' },
+  { key: 'preprint', label: 'Research Papers' },
 ];
 
 export const publications: Publication[] = [
@@ -68,16 +68,10 @@ export const publications: Publication[] = [
       'Shahriar Ivan',
       'Asaduzzaman Herok',
     ],
-    venue: 'Preprint',
     year: 2026,
     category: 'preprint',
-    status: 'Preprint',
     abstract:
       "Graph neural networks have advanced multimodal emotion recognition in conversation (MERC) by modeling contextual and cross-modal dependencies. M³Net further captures higher-order relations and complementary graph frequencies, but its prediction pipeline relies primarily on a shared fused objective and does not adapt modality features or impose class structure before graph propagation. We introduce Prototype-Guided Adaptive Feature Learning, an extension of M³Net that combines Adaptive Feature Weighting (AFW) with modality-specific prototype supervision. To make AFW compatible with flat graph batches, we replace padded temporal pooling with a per-dialogue segment mean that is broadcast to the corresponding utterance nodes. We then construct class prototypes from pre-graph representations and optimize prototypical cross-entropy together with early entropy regularization, providing direct class-discriminative guidance to each encoder. The resulting model preserves M³Net's multivariate and multi-frequency reasoning while improving its learned representations at both feature and class levels. On IEMOCAP and MELD, our method improves accuracy and weighted F1 over the reproduced backbone, demonstrating the effectiveness of adaptive feature processing and prototype-guided supervision for graph-based MERC.",
-    links: {
-      pdf: '#',
-      code: '#',
-    },
   },
   {
     title:
@@ -89,16 +83,10 @@ export const publications: Publication[] = [
       'Shufan Shahi',
       'Afra Anika',
     ],
-    venue: 'Preprint',
     year: 2026,
     category: 'preprint',
-    status: 'Preprint',
     abstract:
       'In this paper, we present an enhanced hybrid framework for zero-shot visual anomaly detection, focusing on robust defect segmentation in complex real-world industrial environments. To significantly improve pixel-level anomaly localization, we integrate a cascaded prompt refinement strategy leveraging the Segment Anything Model (SAM) with the MuSc-DINOv3 architecture. Specifically, we extract initial anomaly heatmaps and employ a 3-pass prompting mechanism. By dynamically sampling positive and negative point prompts through adaptive Otsu thresholding and structural dilation, and generating refined bounding box prompts from connected components, our method effectively isolates defective regions. This integration seamlessly converts coarse anomaly heatmaps into precise binary segmentation masks using a parameter-free SAM refinement module. Experimental results on MVTec AD 2 demonstrate strong localization behavior, achieving a mean SegF1 of 27.78% and several strong category-level results, including 55.55% SegF1 on fabric, 80.94% pixel-level AUROC on walnuts, 94.67% image-level AUROC on vial, and 73.45% mean image-level AP across categories.',
-    links: {
-      pdf: '#',
-      code: '#',
-    },
   },
   {
     title:
@@ -110,16 +98,10 @@ export const publications: Publication[] = [
       'Shahriar Ivan',
       'Asaduzzaman Herok',
     ],
-    venue: 'Preprint',
     year: 2026,
     category: 'preprint',
-    status: 'Preprint',
     abstract:
       "Multimodal Emotion Recognition in Conversations (MERC) aims to identify emotions in each utterance using visual, audio, and linguistic cues, with applications in affective computing and human-computer interaction. Among the various approaches proposed to solve this problem, graph based approaches have emerged as some of the most promising ones but they often underutilize the visual modality due to noisy pixel level features. Traditional visual encoders focus on geometric and texture patterns, which often fail to capture facial expressions and behavioral cues, resulting in weak cross-modal alignment. To address this issue, we propose a Vision Language Model (VLM) based approach that encodes facial expressions and behavioral cues from the visual modality into semantically meaningful representations. Each utterance's video is translated into a descriptive textual representation using structured VLM prompts capturing expressions, gestures, body language and scenario understanding. These semantic visual features replace traditional low level visual inputs in graph based MERC frameworks, reducing noise and allowing the model to focus on meaningful visual information. This work presents VLM based semantic visual feature extraction as a viable replacement for conventional visual feature extraction pipelines in graph based MERC frameworks.",
-    links: {
-      pdf: '#',
-      code: '#',
-    },
   },
   // --- Template ------------------------------------------------------------
   // {

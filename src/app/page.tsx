@@ -23,11 +23,11 @@ export default function HomePage() {
     <>
       <Hero />
       {sections.about && <About />}
+      {sections.projects && <Projects />}
       {sections.research && <Research />}
       {sections.publications && <Publications />}
       {sections.education && <Education />}
       {sections.news && <News />}
-      {sections.projects && <Projects />}
       {sections.teaching && <Teaching />}
       {sections.blog && posts.length > 0 && <Writing posts={posts} />}
       {sections.cv && <CV />}

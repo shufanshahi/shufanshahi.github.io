@@ -49,7 +49,7 @@ Everything is in `src/content/`:
 | `projects.ts` | Projects |
 | `teaching.ts` | Teaching entries |
 | `cv.ts` | CV file path, download name, "last updated" date |
-| `social.ts` | Email, GitHub, LinkedIn, Scholar, ResearchGate, CV links |
+| `social.ts` | Email, GitHub, LinkedIn, CV links |
 | `blog/*.md` | Blog posts, one Markdown file per post |
 
 Non-content files: components live in `src/components/`, pages in `src/app/`,

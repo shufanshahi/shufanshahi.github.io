@@ -8,7 +8,7 @@ import {
 
 export default function Research() {
   return (
-    <Section id="research" title="Research Interests" lead={researchIntro} tinted>
+    <Section id="research" title="Research Interests" lead={researchIntro}>
       <ul className="grid gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-2">
         {researchInterests.map((interest) => (
           <li key={interest.title} className="bg-paper p-6 sm:p-7">
