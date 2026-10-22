@@ -22,15 +22,31 @@ export const education: EducationEntry[] = [
     institution: 'Islamic University of Technology',
     location: 'Dhaka, Bangladesh',
     startDate: '2022',
-    endDate: 'Present',
-    thesisTitle: 'Undergraduate thesis — title to be confirmed',
+    endDate: '2026',
+    thesisTitle: 'Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation',
     thesisDescription:
       'Work on multimodal emotion recognition in conversation, focusing on how graph-based models consume visual features and on reducing modality imbalance during fusion.',
     details: [
-      'Current CGPA: 3.58 / 4.00',
+      'Final CGPA: 3.58 / 4.00',
       'Partial scholarship covering all four years of study',
       'Relevant coursework: Data Structures and Algorithms, Machine Learning, Deep Learning with Computer Vision, Database Systems, Computer Networks',
     ],
+  },
+  {
+    degree: 'Higher Secondary Certificate (HSC)',
+    institution: 'Chuadanga Govt. College',
+    location: 'Chuadanga, Bangladesh',
+    startDate: '2021',
+    endDate: '2021',
+    details: ['GPA: 5.00 / 5.00'],
+  },
+  {
+    degree: 'Secondary School Certificate (SSC)',
+    institution: 'V.J. Govt. High School',
+    location: 'Chuadanga, Bangladesh',
+    startDate: '2019',
+    endDate: '2019',
+    details: ['GPA: 5.00 / 5.00'],
   },
   // --- Template ------------------------------------------------------------
   // {

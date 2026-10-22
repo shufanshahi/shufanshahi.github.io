@@ -120,7 +120,7 @@ export default function Publications() {
     .filter((group) => group.items.length > 0);
 
   return (
-    <Section id="publications" title="Publications">
+    <Section id="research" title="Research" tinted>
       {groups.length === 0 ? (
         <p className="text-ink-secondary">Publications will be listed here.</p>
       ) : (

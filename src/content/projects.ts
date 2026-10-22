@@ -19,6 +19,9 @@ export type Project = {
   period?: string;
 };
 
+/** Number of projects shown before the "show all" toggle. */
+export const maxVisibleProjects = 4;
+
 export const projects: Project[] = [
   {
     title: 'DocuMind',
@@ -88,10 +91,9 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Animeverse',
+    title: 'Weakly Supervised Named Entity Recognition via Sparse-CHMM and BERT',
     description:
-      'Enables users to discover shows based on their interests and interact with the application through an intelligent chatbot.',
-    tags: ['Flutter', 'Firebase'],
-    links: { repo: 'https://github.com/shufanshahi/animeverse' },
+      'Mathematical Analysis course project. Aggregates noisy labeling functions without ground-truth annotations, and models sequence dependencies using Sparse-CHMM with contextual embeddings.',
+    tags: ['NER', 'Sparse-CHMM', 'BERT', 'Weak supervision'],
   },
 ];

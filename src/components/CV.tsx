@@ -7,7 +7,7 @@ export default function CV() {
   const href = withBasePath(cv.file);
 
   return (
-    <Section id="cv" title="Curriculum Vitae" tinted>
+    <Section id="cv" title="Curriculum Vitae">
       <div className="max-w-reading">
         <p className="text-[1.0625rem] leading-relaxed text-ink-secondary">
           {cv.description}

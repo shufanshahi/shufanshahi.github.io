@@ -1,7 +1,10 @@
+'use client';
+
+import { useState } from 'react';
 import Icon from './Icon';
 import Section from './Section';
 import Tag from './Tag';
-import { projects } from '@/content/projects';
+import { maxVisibleProjects, projects } from '@/content/projects';
 import { withBasePath } from '@/lib/format';
 
 const linkMeta: { key: 'repo' | 'demo' | 'project' | 'paper'; label: string; icon: string }[] = [
@@ -12,10 +15,14 @@ const linkMeta: { key: 'repo' | 'demo' | 'project' | 'paper'; label: string; ico
 ];
 
 export default function Projects() {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = projects.length > maxVisibleProjects;
+  const visible = expanded ? projects : projects.slice(0, maxVisibleProjects);
+
   return (
     <Section id="projects" title="Projects" tinted>
       <ul className="grid gap-5 sm:grid-cols-2">
-        {projects.map((project) => (
+        {visible.map((project) => (
           <li
             key={project.title}
             className="flex flex-col overflow-hidden rounded-sm border border-line bg-paper"
@@ -81,6 +88,20 @@ export default function Projects() {
           </li>
         ))}
       </ul>
+
+      {hasMore ? (
+        <button
+          type="button"
+          onClick={() => setExpanded((value) => !value)}
+          className="mt-6 inline-flex items-center gap-1.5 rounded-sm border border-line bg-white px-3 py-1.5 text-[0.8125rem] font-medium text-ink-secondary hover:border-accent-soft hover:text-accent"
+        >
+          <Icon
+            name="chevron"
+            className={`h-3.5 w-3.5 transition-transform ${expanded ? 'rotate-180' : ''}`}
+          />
+          {expanded ? 'Show fewer projects' : `Show all ${projects.length} projects`}
+        </button>
+      ) : null}
     </Section>
   );
 }

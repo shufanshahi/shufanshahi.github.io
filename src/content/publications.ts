@@ -60,6 +60,22 @@ export const publicationCategories: {
 export const publications: Publication[] = [
   {
     title:
+      'Investigating Lightweight Attention Placement in MobileNetV3 for Image Classification on CIFAR-100',
+    authors: [
+      'Shufan Shahi',
+      'Md. Tanzidul Islam Tanzid',
+      'Md Zahedul Islam Tapu',
+      'Mahfuz Ahmed',
+      'Divya Ann Kurien',
+      'Shusmita Anjum Aziz',
+    ],
+    year: 2026,
+    category: 'preprint',
+    abstract:
+      'Lightweight convolutional neural networks require a careful balancing between predictive performance and computation cost. The effectiveness of an attention mechanism often depends on where and how it is deployed in the actual network structure. This study investigates the placement of Efficient Channel Attention (ECA) mechanism in MobileNetV3-Small for CIFAR-100 image classification. Six variants were observed: an unmodified baseline, ECA insertion into the attention-free early blocks, ECA stacking with existing Squeeze-and-Excitation (SE) modules at middle and late stages, combined placements, and complete SE-to-ECA replacements. The baseline achieved 69.18 ± 0.23% Top-1 accuracy. Middle stage ECA stacking also showed 69.42 ± 0.31% accuracy, indicating no reliable advantage from additional attention. Replacing all native SE modules with ECA achieved 69.14 ± 0.16% Top-1 accuracy while reducing parameters from 1.6108M to 1.1577M (28.13%) and computational cost by 2.29%. No statistically significant difference in Top-1 accuracy was detected between the SE-to-ECA replacement and the baseline (p_Holm = 1.000), though the replacement showed a slightly but consistently lower Top-5 accuracy (p_Holm = 0.006). The results show that ECA offers a more parameter-efficient alternative to native SE attention as a replacement rather than a supplement.',
+  },
+  {
+    title:
       'Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation',
     authors: [
       'Shufan Shahi',
@@ -102,6 +118,26 @@ export const publications: Publication[] = [
     category: 'preprint',
     abstract:
       "Multimodal Emotion Recognition in Conversations (MERC) aims to identify emotions in each utterance using visual, audio, and linguistic cues, with applications in affective computing and human-computer interaction. Among the various approaches proposed to solve this problem, graph based approaches have emerged as some of the most promising ones but they often underutilize the visual modality due to noisy pixel level features. Traditional visual encoders focus on geometric and texture patterns, which often fail to capture facial expressions and behavioral cues, resulting in weak cross-modal alignment. To address this issue, we propose a Vision Language Model (VLM) based approach that encodes facial expressions and behavioral cues from the visual modality into semantically meaningful representations. Each utterance's video is translated into a descriptive textual representation using structured VLM prompts capturing expressions, gestures, body language and scenario understanding. These semantic visual features replace traditional low level visual inputs in graph based MERC frameworks, reducing noise and allowing the model to focus on meaningful visual information. This work presents VLM based semantic visual feature extraction as a viable replacement for conventional visual feature extraction pipelines in graph based MERC frameworks.",
+  },
+  {
+    title: 'Deepfake Detection Using Cross-Covariance Image Transformers (XCiT)',
+    authors: [
+      'Taufikur Rahman Fuad',
+      'Ahmed Shafin Ruhan',
+      'Abdullah Al Jubaer Gem',
+      'Mir Musfiq Rahman Ramim',
+      'Md. Sadman Hasan Talukder',
+      'Shufan Shahi',
+      'Tanjil Hasan Khan',
+      'Mohd Abdullah Abrar',
+      'Abdullah As Sami',
+      'Syed Istiuk Raja',
+      'Nadim Ahmed',
+    ],
+    year: 2025,
+    category: 'preprint',
+    abstract:
+      'The rapid advancements in deep generative models have amplified the spread of deepfake contents, raising serious concerns due to its potential for malicious applications. These malpractices often include the manipulation of public opinion, escalation of geopolitical conflicts, defamation, identity theft, and other deceptive practices. Of all forms of deepfakes, synthetic images are the most prevalent, as their creation requires minimal technical expertise and can be accomplished using publicly accessible tools. Even though many deepfake detection techniques already exist and are constantly evolving, the progress in generating deepfake content has kept it equally advanced, if not a step ahead. In this study, we used the Cross-Covariance Image Transformer (XCiT) based image classifier to distinguish real images from fake ones. Combining the accuracy of conventional transformers with the scalability of convolutional architectures, this model could yield a validation accuracy of 94.4%.',
   },
   // --- Template ------------------------------------------------------------
   // {

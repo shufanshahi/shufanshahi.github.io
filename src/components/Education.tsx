@@ -13,7 +13,9 @@ export default function Education() {
             />
 
             <p className="text-[0.8125rem] font-medium uppercase tracking-[0.1em] text-muted">
-              {entry.startDate} — {entry.endDate}
+              {entry.startDate === entry.endDate
+                ? entry.endDate
+                : `${entry.startDate} — ${entry.endDate}`}
             </p>
 
             <h3 className="mt-2 text-[1.125rem] font-semibold text-navy">

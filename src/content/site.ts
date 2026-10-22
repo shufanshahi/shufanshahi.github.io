@@ -7,13 +7,12 @@
 
 export type SectionKey =
   | 'about'
-  | 'research'
   | 'publications'
   | 'education'
-  | 'news'
+  | 'experience'
+  | 'awards'
   | 'projects'
   | 'teaching'
-  | 'blog'
   | 'cv'
   | 'contact';
 
@@ -21,14 +20,14 @@ export const siteConfig = {
   /** Used for the browser tab, metadata and structured data. */
   name: 'Shufan Shahi',
   /** Shown directly under your name in the hero. */
-  title: 'Undergraduate Researcher, Computer Science and Engineering',
+  title: 'Researcher, Computer Science and Engineering',
   /** Institution / affiliation line. */
   affiliation: 'Islamic University of Technology',
   location: 'Dhaka, Bangladesh',
 
   /** One or two sentences. Keep it short — the About section carries the detail. */
   intro:
-    'I am a computer science undergraduate working on multimodal machine learning and computer vision. My research looks at how models combine vision, language and audio — and what breaks when one modality dominates the others.',
+    'I am a computer science graduate focused on research in multimodal machine learning and computer vision. My research looks at how models combine vision, language and audio — and what breaks when one modality dominates the others.',
 
   /**
    * Profile image. Place the file in /public and reference it from the root,
@@ -55,13 +54,12 @@ export const siteConfig = {
  */
 export const sections: Record<SectionKey, boolean> = {
   about: true,
-  research: true,
   publications: true,
   education: true,
-  news: true,
+  experience: true,
+  awards: true,
   projects: true,
   teaching: false,
-  blog: true,
   cv: true,
   contact: true,
 };
@@ -73,13 +71,12 @@ export const sections: Record<SectionKey, boolean> = {
  */
 export const navigation: { key: SectionKey; label: string; href: string }[] = [
   { key: 'about', label: 'About', href: '#about' },
-  { key: 'projects', label: 'Projects', href: '#projects' },
-  { key: 'research', label: 'Research', href: '#research' },
-  { key: 'publications', label: 'Publications', href: '#publications' },
+  { key: 'publications', label: 'Research', href: '#research' },
+  { key: 'experience', label: 'Experience', href: '#experience' },
   { key: 'education', label: 'Education', href: '#education' },
-  { key: 'news', label: 'News', href: '#news' },
+  { key: 'awards', label: 'Awards', href: '#awards' },
+  { key: 'projects', label: 'Projects', href: '#projects' },
   { key: 'teaching', label: 'Teaching', href: '#teaching' },
-  { key: 'blog', label: 'Blog', href: '/blog' },
   { key: 'cv', label: 'CV', href: '#cv' },
   { key: 'contact', label: 'Contact', href: '#contact' },
 ];

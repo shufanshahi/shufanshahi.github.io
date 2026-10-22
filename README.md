@@ -42,15 +42,12 @@ Everything is in `src/content/`:
 | --- | --- |
 | `site.ts` | Name, title, affiliation, hero intro, profile photo, metadata, **section on/off switches**, navigation order |
 | `bio.ts` | The About section |
-| `research.ts` | Research interests and the "looking ahead" note |
 | `publications.ts` | All publications, grouped by category |
 | `education.ts` | Education timeline |
-| `news.ts` | News / milestones |
 | `projects.ts` | Projects |
 | `teaching.ts` | Teaching entries |
 | `cv.ts` | CV file path, download name, "last updated" date |
 | `social.ts` | Email, GitHub, LinkedIn, CV links |
-| `blog/*.md` | Blog posts, one Markdown file per post |
 
 Non-content files: components live in `src/components/`, pages in `src/app/`,
 small helpers in `src/lib/`, and static assets (photo, CV PDF) in `public/`.
@@ -73,21 +70,6 @@ export const bio = {
 ```
 
 The short hero blurb is separate — it is `intro` in `src/content/site.ts`.
-
----
-
-## 5. How to add research interests
-
-Append an entry to `researchInterests` in `src/content/research.ts`. Order in
-the array is the order on the page; `keywords` is optional.
-
-```ts
-{
-  title: 'Research Area',
-  description: 'Two or three sentences about what you work on and why.',
-  keywords: ['Keyword', 'Keyword'],
-},
-```
 
 ---
 
@@ -135,13 +117,6 @@ Append an entry to `projects` in `src/content/projects.ts`:
 
 ---
 
-## 8. How to add blog posts
-
-Create a Markdown file in `src/content/blog/`. **The file name becomes the
-URL** — `my-post.md` is served at `/blog/my-post/`.
-
-```markdown
----
 title: "Post title"
 date: "2026-05-01"
 description: "One or two sentences shown on the blog index."
@@ -181,13 +156,12 @@ Open `src/content/site.ts` and flip a switch:
 ```ts
 export const sections: Record<SectionKey, boolean> = {
   about: true,
-  research: true,
   publications: true,
   education: true,
-  news: true,
+  experience: true,
+  awards: true,
   projects: true,
   teaching: false,   // hidden
-  blog: true,
   cv: true,
   contact: true,
 };
@@ -195,11 +169,6 @@ export const sections: Record<SectionKey, boolean> = {
 
 A disabled section disappears from the page **and** from the navigation bar —
 no other edits required.
-
-One nuance for the blog: turning `blog` off removes the navigation entry and the
-"Writing" block on the home page, but `/blog/…` pages are still generated (a
-statically exported route cannot be conditionally removed at build time). To
-drop them entirely, delete the `src/app/blog/` directory.
 
 Navigation order comes from the `navigation` array directly below the switches;
 reorder it to reorder the menu.
@@ -257,7 +226,7 @@ push to `main` or `master`, and can also be triggered manually from the
 
 There is no server component — the deployed site is plain HTML, CSS and a small
 amount of JavaScript for the mobile menu, the active-section highlight in the
-navigation and the "show all news" toggle.
+navigation and the "show all projects" toggle.
 
 `public/.nojekyll` is included so that GitHub Pages serves the `_next/`
 directory instead of having Jekyll strip it.
