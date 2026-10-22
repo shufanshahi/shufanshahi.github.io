@@ -29,3 +29,11 @@ yarn-error.log*
 *.log
 *.out
 *.synctex.gz
+
+public/cv.aux
+public/cv.log
+public/cv.out
+public/cv.synctex.gz
+public/cv.fdb_latexmk
+public/cv.fls
+

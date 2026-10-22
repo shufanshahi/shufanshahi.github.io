@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% Research-focused CV: computer vision and machine learning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{TitleColor}{HTML}{17324D}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{mathpazo}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{changepage}
+\usepackage{needspace}
+\usepackage[
+  colorlinks=true,
+  urlcolor=TitleColor,
+  linkcolor=TitleColor,
+  pdfauthor={Shufan Shahi},
+  pdftitle={Shufan Shahi - Curriculum Vitae}
+]{hyperref}
+
+\usepackage[left=0.5in,top=0.4in,right=0.5in,bottom=0.5in]{geometry}
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  itemsep=1pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\projectheading}[4]{%
+  \Needspace{3\baselineskip}% Keep the heading with at least the first detail line.
+  \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+    \textbf{#1 - #2} $|$ \emph{#3} & {\small #4}
+  \end{tabularx}\vspace{-4pt}
+}
+
+\name{Shufan Shahi}
+
+% resume.cls prints the third \address first, followed by the first and second.
+\address{
+  \faPhone\ \href{tel:+8801990935044}{+880 1990-935044} \quad
+  \faEnvelope\ \href{mailto:shufanshahi@gmail.com}{shufanshahi@gmail.com}
+}
+\address{
+  \faGithub\ \href{https://github.com/shufanshahi}{github.com/shufanshahi} \quad
+  \faLinkedin\ \href{https://www.linkedin.com/in/shahi-shufan-680135289/}{linkedin.com/in/shahi-shufan} \quad
+  \faGlobe\ \href{https://shufanshahi.github.io/}{shufanshahi.github.io}
+}
+\address{\faMapMarker*\ Dhaka, Bangladesh}
+
+% Keep the template's centered header while containing its harmless \centerline warning.
+\renewcommand{\printaddress}[1]{%
+  \begingroup
+    \hfuzz=31pt
+    \def\\{\addressSep\ }%
+    \centerline{#1}\par
+  \endgroup
+  \addressskip
+}
+
+\makeatletter
+\renewcommand{\printname}{%
+  \begingroup
+    \hfuzz=31pt
+    \hfil{\color{TitleColor}\MakeUppercase{\namesize\bfseries\@name}}\hfil
+    \nameskip\break
+  \endgroup
+}
+\makeatother
+
+\titleformat{\section}
+  {\Large\bfseries\scshape}{}{0em}{\color{TitleColor}}
+  [\color{TitleColor}\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.65em}
+
+\renewenvironment{rSection}[1]{
+  \Needspace{3\baselineskip}% Avoid an orphaned section title without reserving a large block.
+  \section{#1}
+  \begin{list}{}{
+      \setlength{\leftmargin}{0.2em}
+  }
+  \item[]
+}{
+  \end{list}
+  \vspace{0pt}
+}
+
+\begin{document}
+\fontsize{11.5pt}{14pt}\selectfont
+
+\begin{rSection}{About}
+Computer Science and Engineering graduate of the Islamic University of Technology (CGPA 3.58) and researcher in computer vision and machine learning, interested in detection and tracking, segmentation, anomaly detection, large pretrained vision models, and how vision combines with language and audio. Author of five research papers and preprints, including my undergraduate thesis on multimodal emotion recognition in conversation, and 5th place in the VAND4 international competition. Currently a Student Researcher at the Elite Research Lab and an AI Engineer at GLiTch LABS. Based in Dhaka and looking to continue in research.
+\end{rSection}
+
+\begin{rSection}{Education}
+\textbf{Islamic University of Technology}, Dhaka, Bangladesh \hfill \textbf{2022--2026} \\
+B.Sc. in Computer Science and Engineering \hfill \textbf{CGPA: 3.58/4.00} \\
+Thesis: \emph{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation} 
+
+\textbf{Chuadanga Govt. College}, Chuadanga, Bangladesh \hfill \textbf{2021} \\
+Higher Secondary Certificate (HSC) \hfill \textbf{GPA: 5.00/5.00}
+
+\textbf{V.J. Govt. High School}, Chuadanga, Bangladesh \hfill \textbf{2019} \\
+Secondary School Certificate (SSC) \hfill \textbf{GPA: 5.00/5.00}
+\end{rSection}
+
+\begin{rSection}{Research}
+\begin{itemize}[leftmargin=*,label=$\bullet$]
+  \item \textbf{Investigating Lightweight Attention Placement in MobileNetV3 for Image Classification on CIFAR-100} \hfill \textbf{2026} \\
+  Preprint. Studied Efficient Channel Attention placement in MobileNetV3-Small; replacing SE with ECA cut parameters by 28.13\% with no significant Top-1 change.
+  \item \textbf{Prototype-Guided Adaptive Feature Learning for Multimodal Emotion Recognition in Conversation} \hfill \textbf{2026} \\
+  Preprint (undergraduate thesis). Combined adaptive feature weighting with modality-specific prototype supervision on top of M\textsuperscript{3}Net.
+  \item \textbf{EthMuSAM: Mutual Scoring with SAM for Zero-Shot Anomaly Segmentation} \hfill \textbf{2026} \\
+  Preprint. Cascaded SAM prompt refinement on MuSc-DINOv3 heatmaps, evaluated on MVTec AD 2.
+  \item \textbf{Rethinking Visual Features in Graph-Based Multimodal Emotion Recognition in Conversations: From Low-Level Pixels to Semantic Representations} \hfill \textbf{2026} \\
+  Preprint. Replaced low-level visual features with VLM-generated semantic descriptions in graph-based MERC.
+  \item \textbf{Deepfake Detection Using Cross-Covariance Image Transformers (XCiT)} \hfill \textbf{2025} \\
+  Preprint. XCiT-based real-versus-fake image classifier reaching 94.4\% validation accuracy.
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Experience}
+
+\textbf{AI Engineer} \hfill \textbf{2025--Present} \\
+\emph{GLiTch LABS}
+\begin{itemize}
+  \item Develop, fine-tune, and evaluate machine learning and LLM-based features in Python, using PyTorch and TensorFlow, and turn prototypes into production-ready services.
+  \item Build RAG pipelines with embeddings, vector databases, and reranking, and expose models through backend APIs integrated with client applications.
+  \item Prepare and manage datasets and databases for training, evaluation, and inference, and troubleshoot model and pipeline issues alongside teammates.
+\end{itemize}
+
+\textbf{Student Researcher} \hfill \textbf{2026--Present} \\
+\emph{Elite Research Lab}
+\begin{itemize}
+  \item Support research projects through literature reviews, experiments, and analysis.
+\end{itemize}
+
+\textbf{Researcher} \hfill \textbf{2025--2026} \\
+\emph{IUT Computer Vision Lab}
+\begin{itemize}
+  \item Researched multimodal AI methods to improve integration and mitigate modality imbalance.
+\end{itemize}
+
+\textbf{Senior Executive} \hfill \textbf{2025--2026} \\
+\emph{Project Aero}
+\begin{itemize}
+  \item Contributed to drone R\&D by applying AI-based object tracking for international UAV competitions.
+\end{itemize}
+
+\textbf{Intern} \hfill \textbf{2025} \\
+\emph{Battery Low Interactive Ltd.}
+\begin{itemize}
+  \item Learned Flutter development, REST API integration, and applications of fine-tuned ML models.
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Achievements and Awards}
+\begin{itemize}[leftmargin=*,label=$\bullet$]
+  \item \textbf{5th Place, VAND4 International Competition} --- Zero-Shot Industrial Track \hfill \textbf{2026}
+  \item \textbf{First Runner-up, IUT Coderush Hackathon} --- Rapid team application development \hfill \textbf{2025}
+  \item \textbf{7th Place, BAIC Datathon} --- Data preprocessing, visualization, and modeling \hfill \textbf{2025}
+  \item \textbf{Participant, IEEE Signal Processing Cup (SP Cup)} --- Deepfake detection with fine-tuned ML models; wrote a technical report \hfill \textbf{2025}
+  \item \textbf{IUT Partial Scholarship} \hfill \textbf{2022}
+  \item \textbf{HSC Scholarship} \hfill \textbf{2021}
+  \item \textbf{JSC Scholarship} \hfill \textbf{2016}
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{Technical Skills}
+\textbf{Programming Languages:} Python, C++, Java \\
+\textbf{Machine Learning and Deep Learning:} PyTorch, TensorFlow, scikit-learn, NumPy, Pandas \\
+\textbf{Computer Vision:} Object detection (YOLOv11), multi-object tracking (ByteTrack), image and video processing \\
+\textbf{Generative AI and LLM Systems:} RAG, LangChain, LlamaIndex, Ollama, embeddings, reranking, BanglaBERT fine-tuning \\
+\textbf{Backend and APIs:} Flask, Spring Boot, Node.js, REST APIs, RabbitMQ \\
+\textbf{Databases:} PostgreSQL, MySQL, Firebase, ChromaDB (vector DB) \\
+\textbf{DevOps and Tools:} Docker, Git, Linux \\
+\textbf{Web and Mobile:} React, Next.js, Tailwind CSS, React Native, Flutter \\
+\end{rSection}
+
+\end{document}
