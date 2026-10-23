@@ -54,6 +54,18 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.base.outputs.base_path }}
         run: npm run build
 
+      - name: Build portfolios
+        # Each folder under portfolios/ is an independent Next.js site that is
+        # served at /<folder>/ on the same domain. Its next.config.ts sets the
+        # matching basePath.
+        run: |
+          for dir in portfolios/*/; do
+            name="$(basename "$dir")"
+            (cd "$dir" && npm ci && npm run build)
+            mkdir -p "out/$name"
+            cp -r "$dir/out/." "out/$name/"
+          done
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

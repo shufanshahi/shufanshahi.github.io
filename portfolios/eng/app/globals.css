@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0d1117;
+  --color-surface: #141b24;
+  --color-elevated: #1b2530;
+  --color-border: #26313d;
+  --color-muted: #3d4b59;
+  --color-dim: #7c8a99;
+  --color-text: #edf0f2;
+  --color-soft: #b7c1cb;
+  --color-signal: #e8a33d;
+  --color-signal-dim: #b47c26;
+  --color-edge: #4fa8a0;
+  --color-edge-dim: #367d77;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-bg);
+}
+
+/* visible keyboard focus everywhere — no invisible tab stops */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-signal-dim);
+}
+
+/* scroll reveal, driven by IntersectionObserver toggling data-visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* signature node-graph: hero diagram + section-label edges draw in on load */
+.graph-line {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-line 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.graph-node {
+  transform-origin: center;
+  animation: node-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+@keyframes draw-line {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes node-in {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes pulse-ring {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.4); }
+}
+.node-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--color-signal);
+  animation: pulse-ring 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-line { stroke-dashoffset: 0; animation: none; }
+  .graph-node { animation: none; }
+  .node-pulse::before { animation: none; opacity: 0; }
+}
+
+/* clickable hero graph nodes */
+.graph-node-link {
+  cursor: pointer;
+}
+.graph-node-dot,
+.graph-node-text {
+  transition: fill 0.15s ease, stroke 0.15s ease, r 0.15s ease;
+}
+.graph-node-link:hover .graph-node-dot,
+.graph-node-link:focus-visible .graph-node-dot {
+  stroke: var(--color-signal);
+  fill: var(--color-signal);
+  r: 5;
+}
+.graph-node-link:hover .graph-node-text,
+.graph-node-link:focus-visible .graph-node-text {
+  fill: var(--color-text);
+}
