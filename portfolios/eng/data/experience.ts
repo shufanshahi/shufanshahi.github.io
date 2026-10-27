@@ -2,9 +2,13 @@ export const experience = [
   {
     company: "GLiTch LABS",
     role: "AI Engineer",
-    date: "2026 — Present",
-    desc: "Building retrieval-augmented generation systems.",
-    bullets: ["Built RAG architectures, connecting LLMs to vector databases for optimized semantic search."],
+    date: "2025 — Present",
+    desc: "Building ML and LLM systems and the backend services that serve them.",
+    bullets: [
+      "Design, train, fine-tune, and evaluate ML and LLM-based features in Python (PyTorch, TensorFlow), taking prototypes through experimentation to production-ready services.",
+      "Build RAG and retrieval pipelines with embeddings, vector databases, and reranking, and serve models through backend REST APIs integrated with client applications.",
+      "Prepare datasets and run feature engineering and data analysis with Pandas, NumPy, and SQL, and debug model and pipeline issues with backend engineers and product teams.",
+    ],
   },
   {
     company: "Elite Research Lab",

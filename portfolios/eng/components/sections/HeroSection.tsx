@@ -88,13 +88,6 @@ export function HeroSection() {
     <section className="min-h-[85vh] flex flex-col justify-center px-6 md:px-12 py-16 sm:py-20 md:py-24 border-b border-border">
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-border bg-surface">
-            <span className="relative flex h-1.5 w-1.5 rounded-full bg-signal node-pulse" />
-            <span className="font-mono text-[11px] tracking-[0.15em] text-soft uppercase">
-              {hero.title}
-            </span>
-          </div>
-
           <h1 className="font-display font-bold leading-[1.05] text-[clamp(40px,6.5vw,76px)] text-text mb-6">
             Hi, I&apos;m Shufan.
           </h1>
@@ -108,14 +101,6 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-14">
-            <a
-              href={hero.resumeLink}
-              target="_blank"
-              rel="noreferrer"
-              className="px-5 py-2.5 rounded-md bg-signal text-bg font-sans text-sm font-medium transition-all duration-200 hover:bg-signal-dim hover:shadow-[0_0_28px_-6px_var(--color-signal)] active:scale-[0.97]"
-            >
-              Resume
-            </a>
             <a href={socialLinks.github} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center rounded-md border border-border text-dim transition-all duration-200 hover:text-text hover:border-muted hover:bg-elevated active:scale-[0.94]" aria-label="GitHub">
               <GithubIcon />
             </a>

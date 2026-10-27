@@ -17,6 +17,13 @@ import {
   siFlutter,
   siGit,
   siLinux,
+  siFlask,
+  siNodedotjs,
+  siRabbitmq,
+  siDjango,
+  siLangchain,
+  siOllama,
+  siStripe,
   type SimpleIcon,
 } from "simple-icons";
 
@@ -39,4 +46,11 @@ export const skillIcons: Record<string, SimpleIcon> = {
   Flutter: siFlutter,
   Git: siGit,
   Linux: siLinux,
+  Flask: siFlask,
+  "Node.js": siNodedotjs,
+  RabbitMQ: siRabbitmq,
+  Django: siDjango,
+  LangChain: siLangchain,
+  Ollama: siOllama,
+  Stripe: siStripe,
 };
