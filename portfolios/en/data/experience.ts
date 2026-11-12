@@ -1,27 +1,31 @@
 export const experience = [
   {
     company: "GLiTch LABS",
-    role: "Full Stack Developer",
-    date: "2026 — Present",
-    desc: "Web applications and backend services.",
+    role: "Software Engineer",
+    date: "Oct 2026 — Present",
+    desc: "Web applications, backend services and LLM systems.",
     bullets: [
-      "Developed full stack web applications and backend services, building REST APIs, database schemas, and responsive frontends.",
+      "Developed full-stack web applications and backend services with REST APIs, database schemas, and responsive frontends.",
+      "Architected a RAG pipeline (lexical and vector retrieval with reranking) and tuned an LLM, improving answer accuracy and reducing hallucinated responses.",
+      "Delivered a real-time voice agent (streaming speech-to-text, LLM, text-to-speech) and significantly reduced end-to-end response latency through WebSocket streaming, sentence-level TTS chunking, and response caching.",
     ],
   },
   {
     company: "Project Aero",
     role: "Senior Executive",
-    date: "2025 — 2026",
+    date: "Feb 2026 — Aug 2026",
     desc: "University drone development club.",
     bullets: [
-      "Led university drone development initiatives, focusing on AI/ML systems, and contributed to international UAV competitions.",
+      "Led a team of 8 engineers creating software for the university drone program and international UAV competitions.",
     ],
   },
   {
     company: "Battery Low Interactive Ltd.",
     role: "Intern",
-    date: "2025",
+    date: "Oct 2025",
     desc: "Mobile and applied ML internship.",
-    bullets: ["Learned Flutter development, REST API integration, and applications of fine-tuned ML models."],
+    bullets: [
+      "Implemented Flutter app features and integrated 12 REST API endpoints, including a locally fine-tuned Qwen2.5-1.5B model.",
+    ],
   },
 ];

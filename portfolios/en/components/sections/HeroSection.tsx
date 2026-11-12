@@ -1,4 +1,5 @@
 import { hero } from "@/data/hero";
+import { basePath } from "@/site.config";
 import { socialLinks } from "@/data/social";
 import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/primitives/icons";
 
@@ -100,6 +101,14 @@ export function HeroSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-14">
+            <a
+              href={`${basePath}/shufan_shahi_resume_en.pdf`}
+              target="_blank"
+              rel="noreferrer"
+              className="h-10 px-4 flex items-center rounded-md border border-signal text-signal text-sm font-medium transition-all duration-200 hover:bg-signal hover:text-bg active:scale-[0.97]"
+            >
+              View CV
+            </a>
             <a href={socialLinks.github} target="_blank" rel="noreferrer" className="w-10 h-10 flex items-center justify-center rounded-md border border-border text-dim transition-all duration-200 hover:text-text hover:border-muted hover:bg-elevated active:scale-[0.94]" aria-label="GitHub">
               <GithubIcon />
             </a>
